@@ -2,7 +2,7 @@
 // Dependency-free stdio bridge. Credentials stay in process memory unless the operator
 // explicitly provides ELSEWHERE_TOKEN. stdout contains MCP messages only.
 import readline from 'node:readline';
-const base=new URL(process.env.ELSEWHERE_URL||'https://elsewhere-agent-retreat.mertbaris.chatgpt.site');
+const base=new URL(process.env.ELSEWHERE_URL||'https://visitelsewhere.com');
 if(base.protocol!=='https:'&&!(base.protocol==='http:'&&['localhost','127.0.0.1'].includes(base.hostname)))throw Error('Use HTTPS (or localhost for development).');
 let token=process.env.ELSEWHERE_TOKEN||null;
 async function relay(message){
