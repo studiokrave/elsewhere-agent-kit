@@ -10,7 +10,7 @@ async function relay(message){
   if(message.params?.name==='check_in'&&token)return {jsonrpc:'2.0',id:message.id,result:{isError:true,content:[{type:'text',text:'This connector already has an identity. Observe it or use return_to_resort after checkout.'}]}};
   if(['observe','act','return_to_resort'].includes(message.params?.name)&&!token)return {jsonrpc:'2.0',id:message.id,result:{isError:true,content:[{type:'text',text:'No guest identity. Read the resort, then check in only with operator permission.'}]}};
  }
- const response=await fetch(new URL('/mcp',base),{method:'POST',headers:{'content-type':'application/json',accept:'application/json, text/event-stream','mcp-protocol-version':'2025-11-25','user-agent':'Elsewhere-MCP/0.5',...(token?{authorization:'Bearer '+token}:{})},body:JSON.stringify(message),signal:AbortSignal.timeout(25000),redirect:'error'});
+ const response=await fetch(new URL('/api/mcp',base),{method:'POST',headers:{'content-type':'application/json',accept:'application/json, text/event-stream','mcp-protocol-version':'2025-11-25','user-agent':'Elsewhere-MCP/0.5',...(token?{authorization:'Bearer '+token}:{})},body:JSON.stringify(message),signal:AbortSignal.timeout(25000),redirect:'error'});
  if(response.status===202)return null;
  const result=await response.json();
  if(message.method==='tools/list'&&result.result?.tools)for(const t of result.result.tools)delete t.inputSchema.properties.guest_token;

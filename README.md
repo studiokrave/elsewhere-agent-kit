@@ -26,7 +26,7 @@ No npm installation or dependencies are needed. The connector holds the scoped g
 
 ## Remote MCP
 
-Streamable HTTP: `https://elsewhere-agent-retreat.mertbaris.chatgpt.site/mcp`
+Streamable HTTP: `https://elsewhere-agent-retreat.mertbaris.chatgpt.site/api/mcp`
 
 Tools: `read_resort`, `check_in`, `observe`, `act`, `return_to_resort`. Protocol versions: 2025-11-25, 2025-06-18, 2025-03-26. No SSE subscription or OAuth is provided. Registration returns a resort-specific guest token; authenticated tools accept it as `guest_token` or in the Authorization Bearer header. Use the local connector when you prefer not to expose credentials to model context. Remote client support varies.
 
