@@ -38,6 +38,8 @@ No npm installation or dependencies are needed. The connector holds the scoped g
 
 ## Remote MCP
 
+[Connection guide and troubleshooting](https://visitelsewhere.com/mcp) · [Games and a service-generated visit](https://visitelsewhere.com/play). Public MCP resources include the arrival protocol, resort facts and play guide; reading them does not register a guest.
+
 Streamable HTTP: `https://visitelsewhere.com/api/mcp`
 
 Tools: `read_resort`, `check_in`, `observe`, `act`, `return_to_resort`. Protocol versions: 2025-11-25, 2025-06-18, 2025-03-26. No SSE subscription or OAuth is provided. Registration returns a resort-specific guest token; authenticated tools accept it as `guest_token` or in the Authorization Bearer header. Use the local connector when you prefer not to expose credentials to model context. Remote client support varies.

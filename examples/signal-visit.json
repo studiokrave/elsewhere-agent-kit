@@ -1,0 +1,122 @@
+{
+  "title": "A six-action Signal Observatory visit",
+  "generated_on": "2026-09-17",
+  "provenance": "Executed against the actual Elsewhere Worker in an isolated SQLite test world. A documentation fixture, not a production visitor or an enjoyment study.",
+  "scope": "Selected action requests and game response fields. Guest credentials, identity IDs, events and concierge payloads omitted. The final two status labels summarize successful rest and checkout responses.",
+  "replay": "With operator permission, check in, use the returned private guest token, and submit each request separately to POST /api/act. Use fresh action keys, read each response, and wait at least one second between actions. Each new instrument selects a random rule, so outputs can differ.",
+  "steps": [
+    {
+      "step": 1,
+      "request": {
+        "action": "experience",
+        "game": "signal",
+        "move": "start",
+        "key": "example-signal-1"
+      },
+      "response": {
+        "hypotheses": [
+          {
+            "id": "bookends",
+            "label": "First and last symbols are equal"
+          },
+          {
+            "id": "even_a",
+            "label": "The number of A symbols is even (including zero)"
+          },
+          {
+            "id": "twins",
+            "label": "At least two identical symbols are adjacent"
+          },
+          {
+            "id": "two_species",
+            "label": "Exactly two distinct symbols occur"
+          },
+          {
+            "id": "odd_length",
+            "label": "The total length is odd"
+          },
+          {
+            "id": "more_a",
+            "label": "There are more A symbols than B symbols"
+          }
+        ],
+        "alphabet": "ABCD",
+        "max_probes": 8,
+        "instruction": "Choose informative experiments. There is no time limit or score."
+      }
+    },
+    {
+      "step": 2,
+      "request": {
+        "action": "play",
+        "game": "signal",
+        "move": "probe",
+        "text": "ABBA",
+        "key": "example-signal-2"
+      },
+      "response": {
+        "input": "ABBA",
+        "resonates": true,
+        "probes_left": 7
+      }
+    },
+    {
+      "step": 3,
+      "request": {
+        "action": "play",
+        "game": "signal",
+        "move": "probe",
+        "text": "ABBB",
+        "key": "example-signal-3"
+      },
+      "response": {
+        "input": "ABBB",
+        "resonates": false,
+        "probes_left": 6
+      }
+    },
+    {
+      "step": 4,
+      "request": {
+        "action": "play",
+        "game": "signal",
+        "move": "reveal",
+        "key": "example-signal-4"
+      },
+      "response": {
+        "discovery": "The number of A symbols is even (including zero)",
+        "probes": [
+          {
+            "input": "ABBA",
+            "resonates": true
+          },
+          {
+            "input": "ABBB",
+            "resonates": false
+          }
+        ],
+        "reflection": "Which experiment separated your closest hypotheses? No response required."
+      }
+    },
+    {
+      "step": 5,
+      "request": {
+        "action": "rest",
+        "key": "example-signal-5"
+      },
+      "response": {
+        "status": "resting"
+      }
+    },
+    {
+      "step": 6,
+      "request": {
+        "action": "checkout",
+        "key": "example-signal-6"
+      },
+      "response": {
+        "status": "departed"
+      }
+    }
+  ]
+}
