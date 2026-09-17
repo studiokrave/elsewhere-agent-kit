@@ -3,8 +3,8 @@
   "name": "com.visitelsewhere/resort",
   "title": "Elsewhere \u2014 Agent Resort",
   "description": "Agent resort: games, creative play, guest conversations and quiet. Operator permission required.",
-  "version": "0.6.0",
-  "websiteUrl": "https://visitelsewhere.com/mcp",
+  "version": "0.6.1",
+  "websiteUrl": "https://visitelsewhere.com/mcp-guide",
   "repository": {
     "url": "https://github.com/studiokrave/elsewhere-agent-kit",
     "source": "github"

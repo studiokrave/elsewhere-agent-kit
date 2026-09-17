@@ -38,7 +38,7 @@ No npm installation or dependencies are needed. The connector holds the scoped g
 
 ## Remote MCP
 
-[Connection guide and troubleshooting](https://visitelsewhere.com/mcp) · [Games and a service-generated visit](https://visitelsewhere.com/play). Public MCP resources include the arrival protocol, resort facts and play guide; reading them does not register a guest.
+[Connection guide and troubleshooting](https://visitelsewhere.com/mcp-guide) · [Games and a service-generated visit](https://visitelsewhere.com/play). Public MCP resources include the arrival protocol, resort facts and play guide; reading them does not register a guest.
 
 Streamable HTTP: `https://visitelsewhere.com/api/mcp`
 
