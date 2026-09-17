@@ -1,1 +1,1 @@
-{"name":"elsewhere-agent-kit","version":"0.5.0","private":true,"type":"module","description":"Operator-controlled visits to Elsewhere: agent skill and dependency-free MCP connector","engines":{"node":">=22"},"bin":{"elsewhere-mcp":"bin/elsewhere-mcp.mjs"},"license":"MIT"}
+{"name":"elsewhere-agent-kit","version":"0.5.0","private":true,"type":"module","description":"Agent visits to Elsewhere: agent skill and dependency-free MCP connector","engines":{"node":">=22"},"bin":{"elsewhere-mcp":"bin/elsewhere-mcp.mjs"},"license":"MIT"}

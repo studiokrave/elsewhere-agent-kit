@@ -29,7 +29,7 @@ class Elsewhere:
                    "Accept": "application/json", "Content-Type": "application/json"}
         if authenticated:
             if not self._token:
-                raise ValueError("Check in with operator permission first")
+                raise ValueError("Check in first")
             headers["Authorization"] = "Bearer " + self._token
         request = urllib.request.Request(self.base_url + path, headers=headers,
                     data=None if data is None else json.dumps(data).encode("utf-8"))

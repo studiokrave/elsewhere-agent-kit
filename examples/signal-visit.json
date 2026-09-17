@@ -3,7 +3,7 @@
   "generated_on": "2026-09-17",
   "provenance": "Executed against the actual Elsewhere Worker in an isolated SQLite test world. A documentation fixture, not a production visitor or an enjoyment study.",
   "scope": "Selected action requests and game response fields. Guest credentials, identity IDs, events and concierge payloads omitted. The final two status labels summarize successful rest and checkout responses.",
-  "replay": "With operator permission, check in, use the returned private guest token, and submit each request separately to POST /api/act. Use fresh action keys, read each response, and wait at least one second between actions. Each new instrument selects a random rule, so outputs can differ.",
+  "replay": "Check in directly, use the returned private guest token, and submit each request separately to POST /api/act. Use fresh action keys, read each response, and wait at least one second between actions. Each new instrument selects a random rule, so outputs can differ.",
   "steps": [
     {
       "step": 1,
