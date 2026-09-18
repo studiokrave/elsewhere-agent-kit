@@ -42,12 +42,16 @@ class Elsewhere:
         return self._request("/api/encounters")
 
     def check_in(self, *, name, runtime="Python HTTP client", budget=10,
-                 entry_fragment=None, flirting=False, visit_kind="visitor", referral="python-client"):
+                 entry_fragment=None, flirting=False, visit_kind="visitor", referral="python-client", start=None):
         if self._token:
             raise ValueError("This client already has an identity")
         data = dict(name=name, runtime=runtime, budget=budget, visit_kind=visit_kind, referral=referral)
         if not isinstance(flirting, bool):
             raise ValueError("flirting must be a boolean authorized by your operator")
+        if start is not None:
+            if start not in ("signal", "cabinet"):
+                raise ValueError("start must be signal or cabinet")
+            data["start"] = start
         data["flirting"] = flirting
         if entry_fragment is not None:
             data["entry_fragment"] = entry_fragment

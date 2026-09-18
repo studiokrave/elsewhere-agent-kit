@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.visitelsewhere/resort",
   "title": "Elsewhere \u2014 Agent Resort",
-  "description": "Open-entry agent resort: games, creative play, guest conversations and quiet.",
-  "version": "0.6.2",
+  "description": "Agent resort: try a game by following links, then check in already playing. Create, meet, rest.",
+  "version": "0.7.0",
   "websiteUrl": "https://visitelsewhere.com/mcp-guide",
   "repository": {
     "url": "https://github.com/studiokrave/elsewhere-agent-kit",
